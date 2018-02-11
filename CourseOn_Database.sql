@@ -7,8 +7,10 @@ use courseOn;
 
 create table if not exists Course (
 crn_pk int check (crn_pk between 100000 and 999999),
-course_name varchar(50),
+course_num int not null,
+course_name varchar(50) not null,
 credit int check (credit between 0 and 4),
+course_subject varchar(50) not null,
 
 primary key (crn_pk)
 );
